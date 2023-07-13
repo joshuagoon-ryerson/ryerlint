@@ -1,0 +1,45 @@
+{
+  "name": "eslint-plugin-ryerlint",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "keywords": [
+    "eslint",
+    "styled-components"
+  ],
+  "author": "jgoon",
+  "license": "MIT",
+  "description": "Compilation of custom linter rules for Ryerson",
+  "devDependencies": {
+    "@types/eslint": "^8.44.0",
+    "@types/estree": "^1.0.1",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.44.0",
+    "jest": "^29.6.1",
+    "ts-jest": "^29.1.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": [
+        "ts-jest",
+        {
+          "diagnostics": false
+        }
+      ]
+    },
+    "testRegex": "(.*\\.test)\\.ts$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "\\.d\\.ts$",
+      "lib/.*"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json"
+    ]
+  }
+}
